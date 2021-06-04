@@ -2,9 +2,11 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/search.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '', component: () => import('pages/Index.vue') },
+      { path: '/chan', component: () => import('pages/Chan.vue') },
+      { path: '/profile/:id', name: 'profile', component: () => import('pages/profile.vue') }
     ]
   },
 
